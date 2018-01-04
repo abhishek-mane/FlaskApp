@@ -3,7 +3,7 @@
 '''
 
 # Import app
-from src import APP as app, config
+from src import app, web_config as config
 
 # Run the app
 app.run(
