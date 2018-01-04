@@ -6,10 +6,10 @@ Make sure you have python environment set up already
 ```
 * Windows users (powershell/cmd)
     - ```powershell .\run.ps1```
-    OR 
+    - OR 
     - ```.\run.ps1```
 
 * Linux users
     - ```sh ./run.sh```
-    OR 
+    - OR 
     - ```./run.sh```
