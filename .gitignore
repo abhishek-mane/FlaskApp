@@ -1,4 +1,4 @@
 # exclude
 venv/*
 !venv/.gitkeep
-sb-admin/*
+*.pyc
