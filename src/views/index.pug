@@ -2,18 +2,14 @@ doctype html
 html(lang='en')
 
   head
-    meta(charset='utf-8')
-    meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-    meta(name='description', content='')
-    meta(name='author', content='')
+    include includes/meta.pug
 
     title SB Admin - Start Bootstrap Template
 
     include includes/css/core.pug
 
     // Page level plugin CSS
-    link(href='/static/vendor/datatables/dataTables.bootstrap4.css', rel='stylesheet')
+    link(href="{{ url_for('static', filename='vendor/datatables/dataTables.bootstrap4.css') }}", rel='stylesheet')
 
     include includes/css/custom.pug
 
@@ -778,12 +774,12 @@ html(lang='en')
       include includes/js/core.pug
 
       // Page level plugin JavaScript
-      script(src='/static/vendor/chart.js/Chart.min.js')
-      script(src='/static/vendor/datatables/jquery.dataTables.js')
-      script(src='/static/vendor/datatables/dataTables.bootstrap4.js')
+      script(src="{{ url_for('static', filename='vendor/chart.js/Chart.min.js') }}")
+      script(src="{{ url_for('static', filename='vendor/datatables/jquery.dataTables.js') }}")
+      script(src="{{ url_for('static', filename='vendor/datatables/dataTables.bootstrap4.js') }}")
 
       include includes/js/custom.pug
 
       // Custom scripts for this page
-      script(src='/static/js/sb-admin-datatables.min.js')
-      script(src='/static/js/sb-admin-charts.min.js')
+      script(src="{{ url_for('static', filename='js/sb-admin-datatables.min.js') }}")
+      script(src="{{ url_for('static', filename='js/sb-admin-charts.min.js') }}")

@@ -1,5 +1,12 @@
-from config import CONFIG
-from src import app
+'''
+    * Starting point of the application
+'''
 
-# run app
-app.run(host=CONFIG['host'], port=CONFIG['port'])
+# Import app
+from src import APP as app, config
+
+# Run the app
+app.run(
+    host=config.WEBCONFIG['host'],
+    port=config.WEBCONFIG['port']
+)
