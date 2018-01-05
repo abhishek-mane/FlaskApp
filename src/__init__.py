@@ -8,7 +8,7 @@ import logging
 from flask import Flask
 
 # custom imports
-from .utils import initializeLogger
+from .utils import initializeLogger, initializeErrorPages
 from .routes import initialize as initializeRoutes
 from .web_config import CONFIG
 
@@ -33,3 +33,6 @@ app.jinja_env.add_extension('pypugjs.ext.jinja.PyPugJSExtension')
 # initialize routes
 logging.info('Initializing webserver routes')
 initializeRoutes(app)
+
+# initialize utils
+initializeErrorPages(app)
