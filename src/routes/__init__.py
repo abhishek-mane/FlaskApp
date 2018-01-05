@@ -1,4 +1,5 @@
 from . import pages
 
-def initializeRoutes(app):
+
+def initialize(app):
     pages.initialize(app)
