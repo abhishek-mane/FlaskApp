@@ -1,4 +1,10 @@
-# exclude
+# ** Exclude virtual environment but keep folder
 venv/*
 !venv/.gitkeep
+
+# ** Exclude all python compiled's
 *.pyc
+
+# ** Exclude logs but keep folder
+logs/*
+!logs/.gitkeep

@@ -2,30 +2,28 @@
     * Global configurations for app
 '''
 
-import os, inspect, os.path
-from src.app_config import Config, ProductionConfig, DevelopmentConfig, TestingConfig
+import os, inspect, os.path as path
 
-root_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
-
-print os.path.abspath(os.path.join(root_dir,os.pardir))
+APP_DIR     = path.dirname(path.abspath(inspect.getfile(inspect.currentframe())))
+BASE_DIR    = path.abspath(path.join(APP_DIR,os.pardir))
+LOGS_DIR    = path.join(BASE_DIR, 'logs')
 
 CONFIG = {
-    # 'root_dir'          : '',
-    'app_config'        : DevelopmentConfig,
-    'host'              : 'localhost',
-    'port'              : 3000,
-    'static_url_path'   : '/static',
-    'static_folder'     : 'public',
-    'template_folder'   : 'views',
-    'logging'           :{
-        'console':{
-            'level': 'INFO',
+    'name'                  : 'Sample Flask App',
+    'host'                  : 'localhost',
+    'port'                  : 8000,
+    'static_url_path'       : '/static',
+    'static_folder'         : 'public',
+    'template_folder'       : 'views',
+    'logging': {
+        'console': {
+            'level'         : 'INFO',
         },
         'file':{
-            'level': 'DEBUG',
-            'filename': 'server.log',
-            'maxBytes': 1024*10,
-            'backupCount': 3,
+            'level'         : 'DEBUG',
+            'filename'      : path.join(LOGS_DIR, 'server.log'),
+            'maxBytes'      : 1024*10,
+            'backupCount'   : 3,
         }
     }
 }

@@ -3,10 +3,11 @@
 '''
 
 # import app & configs
-from src import app, web_config
+from src import app
+from src.web_config import CONFIG
 
 # start the app
 app.run(
-    host=web_config.CONFIG['host'],
-    port=web_config.CONFIG['port']
+    host = CONFIG['host'],
+    port = CONFIG['port']
 )
