@@ -14,8 +14,8 @@ CONFIG = {
     'host'                  : 'localhost',
     'port'                  : 7600,
     'static_url_path'       : '/static',
-    'static_folder'         : 'public',
-    'template_folder'       : 'views',
+    'static_folder'         : 'static',
+    'template_folder'       : 'templates',
     'logging': {
         'console': {
             'level'         : 'INFO',
