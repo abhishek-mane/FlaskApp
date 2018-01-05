@@ -23,7 +23,7 @@ CONFIG = {
         'file':{
             'level'         : 'DEBUG',
             'filename'      : path.join(LOGS_DIR, 'server.log'),
-            'maxBytes'      : 1024*10,
+            'maxBytes'      : 1e+7,
             'backupCount'   : 3,
         }
     }
