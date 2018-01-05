@@ -10,8 +10,9 @@ LOGS_DIR    = path.join(BASE_DIR, 'logs')
 
 CONFIG = {
     'name'                  : 'Sample Flask App',
+    'APP_DIR'               : APP_DIR,
     'host'                  : 'localhost',
-    'port'                  : 8000,
+    'port'                  : 7600,
     'static_url_path'       : '/static',
     'static_folder'         : 'public',
     'template_folder'       : 'views',

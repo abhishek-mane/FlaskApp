@@ -18,10 +18,10 @@ initializeLogger(CONFIG)
 # initialize flask app
 app = Flask(
     CONFIG['name'],
-    static_url_path = CONFIG['static_url_path'],
-    static_folder   = CONFIG['static_folder'],
-    template_folder = CONFIG['template_folder'],
-    root_path       = __name__
+    static_url_path = '/static',
+    static_folder   = 'public',
+    template_folder = 'views',
+    root_path       = CONFIG['APP_DIR']
 )
 
 # app.config is pending
